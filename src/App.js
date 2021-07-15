@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import './assets/css/App.css';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
-function App() {
+import Accueil from './pages/Accueil'
+import Musique from './pages/Musique'
+import Favoris from './pages/Favoris'
+
+require('dotenv').config()
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // on charge les pages dans app
+    <Router>
+        <Switch>
+            {/* le routeur redirige sur une page  */}
+            
+            <Route path="/favoris" exact>
+                <Favoris/>
+            </Route>
+            <Route path="/musique" exact>
+                <Musique/>
+            </Route>
+            <Route path="/" exact>
+                <Accueil/>
+            </Route>
+            <Redirect to="/" />
+        </Switch>
+    </Router>
   );
 }
-
-export default App;

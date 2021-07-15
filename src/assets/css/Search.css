@@ -1,0 +1,13 @@
+.recherche-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin-top: 2vh;
+}
+
+
+.search-bar{
+    width: 25%;
+    height: 30px;
+}

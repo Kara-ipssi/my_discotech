@@ -1,0 +1,27 @@
+.musique-card{
+    display: flex;
+    flex-direction: row;
+    width: 400px;
+    height: 200px;
+    padding: 3px;
+    background-color: #fff;
+    border: 1px solid black
+}
+
+.img-profile{
+    width: 200px;
+    height: 200px;
+}
+
+.action-profile{
+    display:flex;
+    flex-direction: row;
+    position: relative;
+
+    right: -80px;
+    bottom: -60px;
+}
+
+.btn-fav{
+    margin-left:5px;
+}
